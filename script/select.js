@@ -11,7 +11,7 @@ function selected1(){
     const setName = createP('a1div','aa1')
      const setNames = seatName('aa1','a1')
      const reverse = addClass('a1div', 'flex-row-reverse')
-    const totalCount = totalPrice ()
+    // const totalCount = totalPrice ()
     // const getTotal = convertNumvers('total');
     //  const total = newSelectedSeat * 550;
     //  const setTotalValue = setElementValue('total', total)

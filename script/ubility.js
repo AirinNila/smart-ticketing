@@ -15,7 +15,7 @@ function commonOfAll (){
     const newSelectedSeat = selectedSeatNumber('selected-seat-number')
     const setValues = setElementValue('selected-seat-number', newSelectedSeat)
     const setTextColor = addClass('default-seat-details','hidden')
-
+    const totalCount = totalPrice ()
     const getTotal = convertNumvers('total');
      const total = newSelectedSeat * 550;
      const setTotalValue = setElementValue('total', total)
