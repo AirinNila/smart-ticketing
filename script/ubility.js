@@ -9,17 +9,86 @@
 // }
 
 function commonOfAll (){
+    // 40 seat
     const seatSelected = convertNumvers('above-seat')
     const currentSeat = seatSelected - 1
     const setNewSelectedSeat =  setElementValue('above-seat',currentSeat);
+    // selected 4 seat
+    // const newSelectedSeat = selectedSeatNumber('selected-seat-number')
+    // const setValues = setElementValue('selected-seat-number', newSelectedSeat)
+    const setTextColor = addClass('default-seat-details','hidden')
+    const forHide = forHideTotalPrice('default-total', 'total')
+    // const getTotal = convertNumvers('total');
+    //  const total = newSelectedSeat * 550;
+    const total = defaultTotal()
+     const setTotalValue = setElementValue('total', total)
+     console.log(total)
+     // coupon
+    //  if(newSelectedSeat === 4){
+    //     const ableCouponButton = removeAttribute('coupon-btn', 'disabled')
+    //     // const discount = total
+    //  }
+     //for discount
+    //  const discountPrice = forDiscount(total, newSelectedSeat)
+    //  const setDiscountPrice = setElementValue()
+     // for mail
+     forMail ()
+
+}
+
+// seat select and total
+function defaultTotal(){
     const newSelectedSeat = selectedSeatNumber('selected-seat-number')
     const setValues = setElementValue('selected-seat-number', newSelectedSeat)
-    const setTextColor = addClass('default-seat-details','hidden')
-    const totalCount = totalPrice ()
     const getTotal = convertNumvers('total');
      const total = newSelectedSeat * 550;
-     const setTotalValue = setElementValue('total', total)
+     if(newSelectedSeat === 4){
+        const ableCouponButton = removeAttribute('coupon-btn', 'disabled')
+        // const discount = total
+     }
+     return total;
+    
 }
+
+// 15 discount
+function forDiscount (){
+    const newDiscount = ( 2200 / 100 ) * 15;
+    const coupleDiscount = (2200 / 100 ) * 20;
+    const couponTextId = document.getElementById('coupon-field')
+    const couponText = couponTextId.value;
+    
+        if(couponText === 'new15'){
+            const newDiscountedPrice = 2200 - newDiscount;
+            return newDiscountedPrice;
+        }
+        if (couponText === 'couple20'){
+            const coupleDiscountedPrice = 2200 - coupleDiscount;
+            return coupleDiscountedPrice;
+        }
+        // else{
+        //     mainTotal = mainTotal;
+        // }
+    
+}
+// // 15 discount
+// function forDiscount (mainTotal, seat){
+//     const newDiscount = ( mainTotal / 100 ) * 15;
+//     const coupleDiscount = (mainTotal / 100 ) * 20;
+//     document.getElementById('coupon-field').addEventListener('keyup', function(event){
+//         const writeCoupon = event.target.value;
+//         if(writeCoupon === 'new15' && seat === 4){
+//             const coupleDiscountedPrice = mainTotal - newDiscount;
+//             return coupleDiscountedPrice;
+//         }
+//         else if (writeCoupon === 'couple20' && seat === 4){
+//             const newiscountedPrice = mainTotal - coupleDiscount;
+//             return newDiscount;
+//         }
+//         else{
+//             mainTotal = mainTotal;
+//         }
+//     })
+// }
 
 // set bg color
 function setBgColorById(id){
@@ -121,9 +190,37 @@ function createP (element, newId){
 
 
 // total
-function totalPrice (){
-    const hideDefault = addClass('default-total', 'hidden');
-    const showReal = removeClass ('total', 'hidden');
+function forHideTotalPrice (bydefault ,main ){
+    const hideDefault = addClass( bydefault, 'hidden');
+    const showReal = removeClass (main, 'hidden');
+    // const hideDefault = addClass('default-total', 'hidden');
+    // const showReal = removeClass ('total', 'hidden');
     
     
 }
+
+//remove attribute 
+function removeAttribute (id, expected){
+    const getId = document.getElementById(id);
+    getId.removeAttribute(expected)
+}
+
+
+ //for mail
+ function forMail (){
+
+ document.getElementById('email-input').addEventListener('keyup', function(){
+    removeAttribute('next-btn', 'disabled')
+    
+  })
+}
+//  function forMail (){
+
+//  document.getElementById('email-input').addEventListener('keyup', function(event){
+//     const emailValue = event.target.value;
+//     if(emailValue === '@gmail.com'){
+//      removeAttribute('next-btn', 'disabled')
+//     }
+//   })
+// }
+

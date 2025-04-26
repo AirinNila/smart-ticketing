@@ -1,3 +1,11 @@
+function couponApply(){
+    const forHide = forHideTotalPrice('g-default-total', 'g-total')
+    const defaultPrice = 2200;
+    const discountPrice = forDiscount()
+    console.log(discountPrice)
+    const setDiscountPrice = setElementValue('g-total', discountPrice)
+}
+
 function selected1(){
     const setColor = setBgColorById('a1')
     commonOfAll ()
@@ -15,7 +23,7 @@ function selected1(){
     // const getTotal = convertNumvers('total');
     //  const total = newSelectedSeat * 550;
     //  const setTotalValue = setElementValue('total', total)
-    
+  
 
 }
 
