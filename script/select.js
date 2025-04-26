@@ -2,8 +2,19 @@ function couponApply(){
     const forHide = forHideTotalPrice('g-default-total', 'g-total')
     const defaultPrice = 2200;
     const discountPrice = forDiscount()
-    console.log(discountPrice)
     const setDiscountPrice = setElementValue('g-total', discountPrice)
+}
+
+// for next
+function next(){
+    addClass('index', 'hidden')
+    removeClass('success', 'hidden')
+}
+
+//continue
+function continu(){
+    addClass('success', 'hidden')
+    removeClass('index', 'hidden')
 }
 
 function selected1(){
@@ -19,11 +30,12 @@ function selected1(){
     const setName = createP('a1div','aa1')
      const setNames = seatName('aa1','a1')
      const reverse = addClass('a1div', 'flex-row-reverse')
+     addAttribute('a1','disabled')
     // const totalCount = totalPrice ()
     // const getTotal = convertNumvers('total');
     //  const total = newSelectedSeat * 550;
     //  const setTotalValue = setElementValue('total', total)
-  
+    
 
 }
 
@@ -35,7 +47,7 @@ function selected2(){
     const setName = createP('a2div','aa2')
     const setNames = seatName('aa2','a2')
     const reverse = addClass('a2div', 'flex-row-reverse')
-   
+   addAttribute('a2','disabled')
 }
 //a3
 function selected3(){
@@ -45,6 +57,7 @@ function selected3(){
     const setName = createP('a3div','aa3')
     const setNames = seatName('aa3','a3')
     const reverse = addClass('a3div', 'flex-row-reverse')
+    addAttribute('a3','disabled')
    
 }
 //a4
@@ -55,5 +68,5 @@ function selected4(){
     const setName = createP('a4div','aa4')
     const setNames = seatName('aa4','a4')
     const reverse = addClass('a4div', 'flex-row-reverse')
-   
+    addAttribute('a4','disabled')
 }

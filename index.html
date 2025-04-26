@@ -38,7 +38,7 @@
 
 </head>
 <body class="raleway">
-  <div class="">
+  <div id="index" class="">
     <header class="container mx-auto">
       <nav>
         <div class="navbar bg-base-100 shadow-sm">
@@ -417,7 +417,7 @@
                 <legend  class="fieldset-legend  text-des font-semibold pb-2">Email ID</legend>
                 <input id="email-input" type="email" class="input border-2 border-[#0307121A] w-full" placeholder="Enter your email id"  required />
               </fieldset>
-              <button id="next-btn" disabled class="btn bg-primary  text-white text-base font-semibold rounded-lg ">Next</button>
+              <button onclick="next()" id="next-btn" disabled class="btn bg-primary  text-white text-base font-semibold rounded-lg ">Next</button>
               <div class="flex gap-2 text-dex">
                 <p><u>Terms and Conditions</u></p>
                 <p><u>Cancellation Policy</u></p>
@@ -436,7 +436,7 @@
   </div>
 
   <!-- success -->
-   <section class="hidden">
+   <section id="success" class="hidden">
     <div class="flex justify-center items-center mt-2">
     <div class="w-7/12 bg-[#F2F1F1] px-24 py-16 rounded-lg">
       <div class="bg-white flex flex-col justify-center items-center p-12 rounded-lg gap-6">
@@ -447,7 +447,7 @@
           We are working hard to find the best service and deals for you.</p>
         <p class="text-[#4A4A4A99]">Shortly you will find a confirmation in your email.</p>
       </div>
-        <button class="btn bg-[#27AE60] text-white px-16 rounded-full">Continue</button>
+        <button onclick="continu()" class="btn bg-[#27AE60] text-white px-16 rounded-full">Continue</button>
       </div>
     </div>
   </div>

@@ -45,8 +45,10 @@ function defaultTotal(){
      if(newSelectedSeat === 4){
         const ableCouponButton = removeAttribute('coupon-btn', 'disabled')
         // const discount = total
+        
      }
      return total;
+     
     
 }
 
@@ -204,6 +206,11 @@ function removeAttribute (id, expected){
     const getId = document.getElementById(id);
     getId.removeAttribute(expected)
 }
+//add attribute 
+function addAttribute (id, expected){
+    const getId = document.getElementById(id);
+    getId.setAttribute(expected, true)
+}
 
 
  //for mail
@@ -224,3 +231,19 @@ function removeAttribute (id, expected){
 //   })
 // }
 
+
+
+// for on click
+// let isButtonActive = false;
+// function toggleFunction (){
+//     if(!toggleFunction){
+//         console.log('first clicked')
+//         isButtonActive = true
+//         //function here
+//     }
+//     else{
+//         console.log('previous')
+//     }
+   
+// }
+// document.getElementById('a1').addEventListener('click',toggleFunction)
