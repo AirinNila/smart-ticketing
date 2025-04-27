@@ -1,37 +1,14 @@
-//get seat
-// function seats(){
-//     const seatNumber = 'a1,a2,a3,a4,b1,b2,b3,b4,c1,c2,c3,c4,d1,d2,d3,d4,e1,e2,e3,e4,f1,f2,f3,f4,g1,g2,g3,g4,h1,h2,h3,h4,i1,i2,i3,i4,j1,j2,j3,j4'
-//     const getSeat = seatNumber.split(',')
-//     for( const seat of getSeat){
-       
-//     }
-    
-// }
+
 
 function commonOfAll (){
     // 40 seat
     const seatSelected = convertNumvers('above-seat')
     const currentSeat = seatSelected - 1
     const setNewSelectedSeat =  setElementValue('above-seat',currentSeat);
-    // selected 4 seat
-    // const newSelectedSeat = selectedSeatNumber('selected-seat-number')
-    // const setValues = setElementValue('selected-seat-number', newSelectedSeat)
     const setTextColor = addClass('default-seat-details','hidden')
     const forHide = forHideTotalPrice('default-total', 'total')
-    // const getTotal = convertNumvers('total');
-    //  const total = newSelectedSeat * 550;
     const total = defaultTotal()
      const setTotalValue = setElementValue('total', total)
-     console.log(total)
-     // coupon
-    //  if(newSelectedSeat === 4){
-    //     const ableCouponButton = removeAttribute('coupon-btn', 'disabled')
-    //     // const discount = total
-    //  }
-     //for discount
-    //  const discountPrice = forDiscount(total, newSelectedSeat)
-    //  const setDiscountPrice = setElementValue()
-     // for mail
      forMail ()
 
 }
@@ -88,25 +65,7 @@ function forDiscount (){
         // }
     
 }
-// // 15 discount
-// function forDiscount (mainTotal, seat){
-//     const newDiscount = ( mainTotal / 100 ) * 15;
-//     const coupleDiscount = (mainTotal / 100 ) * 20;
-//     document.getElementById('coupon-field').addEventListener('keyup', function(event){
-//         const writeCoupon = event.target.value;
-//         if(writeCoupon === 'new15' && seat === 4){
-//             const coupleDiscountedPrice = mainTotal - newDiscount;
-//             return coupleDiscountedPrice;
-//         }
-//         else if (writeCoupon === 'couple20' && seat === 4){
-//             const newiscountedPrice = mainTotal - coupleDiscount;
-//             return newDiscount;
-//         }
-//         else{
-//             mainTotal = mainTotal;
-//         }
-//     })
-// }
+
 
 // set bg color
 function setBgColorById(id){
@@ -172,25 +131,7 @@ function createD (element, newId){
     
 }
 
-//add seat details
-// function addDiv(newId){
-//     const getParent = document.getElementById('seat-details')
-//     getParent.classList.remove('hidden')
-//     const newDiv = document.createElement('div');
-//     // const getId = document.getElementById(element);
-//     const newP = document.createElement('div');
-//     newP.classList.add('flex')
-//     newP.classList.add('justify-between')
-//     newP.classList.add('pb-2')
-//     newP.classList.add('text-des')
-//     newP.setAttribute('id',newId)
-//     newP.innerHTML=`
-//     <p>550</p>
-//     <p>Economoy</p>
-//     `
-//     newDiv.appendChild(newP)
-//     getParent.appendChild(newDiv)
-// }
+
 
 function addDivSeatDetails(newId){
     const getParent = document.getElementById('seat-details')
@@ -213,11 +154,6 @@ function addDivSeatDetails(newId){
     newP.appendChild(p1)
     newP.appendChild(p2)
     newP.appendChild(p3)
-    // newP.setAttribute('id',newId)
-    // newP.innerHTML=`
-    // <p>550</p>
-    // <p>Economoy</p>
-    // `
     newDiv.appendChild(newP)
     getParent.appendChild(newDiv)
 }
@@ -230,21 +166,12 @@ function createP (element, newId){
     getId.appendChild(newP)
 }
 
-//count child
-// function countChild(parent){
-//     const getParent = document.getElementById(parent);
-//     const count = document.querySelectorAll('#parent>[id^=child]').length
-// }
-
 
 // total
 function forHideTotalPrice (bydefault ,main ){
     const hideDefault = addClass( bydefault, 'hidden');
     const showReal = removeClass (main, 'hidden');
-    // const hideDefault = addClass('default-total', 'hidden');
-    // const showReal = removeClass ('total', 'hidden');
-    
-    
+
 }
 
 //remove attribute 
@@ -267,29 +194,5 @@ function addAttribute (id, expected){
     
   })
 }
-//  function forMail (){
-
-//  document.getElementById('email-input').addEventListener('keyup', function(event){
-//     const emailValue = event.target.value;
-//     if(emailValue === '@gmail.com'){
-//      removeAttribute('next-btn', 'disabled')
-//     }
-//   })
-// }
 
 
-
-// for on click
-// let isButtonActive = false;
-// function toggleFunction (){
-//     if(!toggleFunction){
-//         console.log('first clicked')
-//         isButtonActive = true
-//         //function here
-//     }
-//     else{
-//         console.log('previous')
-//     }
-   
-// }
-// document.getElementById('a1').addEventListener('click',toggleFunction)
