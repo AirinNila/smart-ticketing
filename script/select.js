@@ -1,8 +1,9 @@
 function couponApply(){
-    const forHide = forHideTotalPrice('g-default-total', 'g-total')
+    const forHide = forHideTotalPrice('g-default-total', 'g-total');
     const defaultPrice = 2200;
-    const discountPrice = forDiscount()
-    const setDiscountPrice = setElementValue('g-total', discountPrice)
+    const discountPrice = forDiscount();
+    const setDiscountPrice = setElementValue('g-total', discountPrice);
+    
 }
 
 // for next
@@ -42,23 +43,3 @@ function seat(id){
 
 }
 
-//a2
-// function selected2(){
-//     const setColor = setBgColorById('a2')
-//     commonOfAll ()
-//     const addSeatDetails = addDiv('a2div')
-//     const setName = createP('a2div','aa2')
-//     const setNames = seatName('aa2','a2')
-//     const reverse = addClass('a2div', 'flex-row-reverse')
-//    addAttribute('a2','disabled')
-// }
-// //a3
-// function selected3(){
-//     const setColor = setBgColorById('a3')
-//     commonOfAll ()
-//     const addSeatDetails = addDiv('a3div')
-//     const setName = createP('a3div','aa3')
-//     const setNames = seatName('aa3','a3')
-//     const reverse = addClass('a3div', 'flex-row-reverse')
-//     addAttribute('a3','disabled')
-   

@@ -62,12 +62,25 @@ function forDiscount (){
     const couponTextId = document.getElementById('coupon-field')
     const couponText = couponTextId.value;
     
-        if(couponText === 'new15'){
+        if(couponText === 'NEW15'){
             const newDiscountedPrice = 2200 - newDiscount;
+            addClass('coupon-area', 'hidden');
+            removeClass('discount-details', 'hidden');
+            removeClass('d-total', 'hidden')
+            const convert = convertNumvers('d-total')
+            const discounted = convert + newDiscount;
+            setElementValue('d-total', discounted)
             return newDiscountedPrice;
+            
         }
         if (couponText === 'couple20'){
             const coupleDiscountedPrice = 2200 - coupleDiscount;
+            addClass('coupon-area', 'hidden');
+            removeClass('discount-details', 'hidden');
+            removeClass('d-total', 'hidden')
+            const convert = convertNumvers('d-total')
+            const discounted = convert + coupleDiscount;
+            setElementValue('d-total', discounted)
             return coupleDiscountedPrice;
         }
         // else{
@@ -249,7 +262,7 @@ function addAttribute (id, expected){
  //for mail
  function forMail (){
 
- document.getElementById('email-input').addEventListener('keyup', function(){
+ document.getElementById('nbr-input').addEventListener('keyup', function(){
     removeAttribute('next-btn', 'disabled')
     
   })
