@@ -47,6 +47,9 @@ function defaultTotal(){
         // const discount = total
         
      }
+     if(newSelectedSeat > 4){
+        
+     }
      return total;
      
     
@@ -157,9 +160,30 @@ function createD (element, newId){
 }
 
 //add seat details
-function addDiv(newId){
+// function addDiv(newId){
+//     const getParent = document.getElementById('seat-details')
+//     getParent.classList.remove('hidden')
+//     const newDiv = document.createElement('div');
+//     // const getId = document.getElementById(element);
+//     const newP = document.createElement('div');
+//     newP.classList.add('flex')
+//     newP.classList.add('justify-between')
+//     newP.classList.add('pb-2')
+//     newP.classList.add('text-des')
+//     newP.setAttribute('id',newId)
+//     newP.innerHTML=`
+//     <p>550</p>
+//     <p>Economoy</p>
+//     `
+//     newDiv.appendChild(newP)
+//     getParent.appendChild(newDiv)
+// }
+
+function addDivSeatDetails(newId){
     const getParent = document.getElementById('seat-details')
     getParent.classList.remove('hidden')
+   
+    addClass('default-seat-details','hidden')
     const newDiv = document.createElement('div');
     // const getId = document.getElementById(element);
     const newP = document.createElement('div');
@@ -167,11 +191,20 @@ function addDiv(newId){
     newP.classList.add('justify-between')
     newP.classList.add('pb-2')
     newP.classList.add('text-des')
-    newP.setAttribute('id',newId)
-    newP.innerHTML=`
-    <p>550</p>
-    <p>Economoy</p>
-    `
+    const p1 = document.createElement('p')
+    const p2 = document.createElement('p')
+    const p3 = document.createElement('p')
+    p1.innerText = newId.innerText;
+    p2.innerText = 'Economoy';
+    p3.innerText = '550';
+    newP.appendChild(p1)
+    newP.appendChild(p2)
+    newP.appendChild(p3)
+    // newP.setAttribute('id',newId)
+    // newP.innerHTML=`
+    // <p>550</p>
+    // <p>Economoy</p>
+    // `
     newDiv.appendChild(newP)
     getParent.appendChild(newDiv)
 }
